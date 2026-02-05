@@ -1,0 +1,10 @@
+runtime: nodejs20  # Use the latest supported Node.js version
+
+handlers:
+  - url: /(.+\.(js|css|ico|png|jpg|svg|json|txt|html))$
+    static_files: build/\1
+    upload: build/.*\.(js|css|ico|png|jpg|svg|json|txt|html)
+
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html

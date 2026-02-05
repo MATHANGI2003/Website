@@ -1,0 +1,620 @@
+.career-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1b2e;
+    color: white;
+    padding: 80px 60px;
+    min-height: 100vh;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.career-left {
+    max-width: 500px;
+}
+
+.career-welcome {
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.career-heading {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.highlight {
+    color: #a855f7;
+}
+
+.career-subtext {
+    font-size: 18px;
+    color: #cbd5d1;
+    margin-bottom: 32px;
+}
+
+.career-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn.purple {
+    background-color: #a855f7;
+    color: white;
+    border: none;
+}
+
+.btn.purple:hover {
+    background-color: #9333ea;
+}
+
+.btn.outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn.outline:hover {
+    background-color: white;
+    color: #1e1b2e;
+}
+
+.career-hot {
+    color: #a0aec0;
+    font-size: 15px;
+}
+
+.bold {
+    color: white;
+    font-weight: 600;
+}
+
+.career-right {
+    flex: 1;
+    max-width: 600px;
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.img-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.img-grid .full-width {
+    grid-column: span 2;
+}
+
+
+
+
+.perks-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.perks-subtitle {
+    color: #6b46c1;
+    /* purple */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.perks-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.perks-description {
+    color: #555;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.perks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.perk-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.perk-card:hover {
+    transform: translateY(-5px);
+}
+
+.perk-icon {
+    font-size: 2.5rem;
+    color: #6b46c1;
+    margin-bottom: 1rem;
+}
+
+.perk-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #222;
+}
+
+.underline {
+    width: 40px;
+    height: 3px;
+    background-color: #6b46c1;
+    margin: 0.5rem auto 1rem;
+    border-radius: 2px;
+}
+
+.perk-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+
+
+.working-section {
+    display: flex;
+    padding: 60px 80px;
+    background-color: #fff5ee;
+    gap: 50px;
+    align-items: center;
+}
+
+.working-left img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.working-right {
+    flex: 1;
+}
+
+.section-subtitles {
+    color: #6b46c1;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.section-descriptions {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #6b46c1;
+}
+
+.section-paragraph {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.value-icon {
+    font-size: 1.5rem;
+    color: #8d6e63;
+    margin-top: 4px;
+}
+
+.value-item h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.value-item p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+
+
+.stats-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-item {
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+
+.benefits-section {
+    display: flex;
+    padding: 60px 40px;
+    background-color: #2D0D41;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.benefits-left {
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+}
+
+.benefits-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.benefits-right img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.section-tag {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: purple;
+}
+
+.section-subtitle {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.accordion {
+    border-top: 1px solid #ccc;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.accordion-content {
+    margin-top: 10px;
+    color: white;
+    line-height: 1.5;
+}
+
+
+
+
+.apply-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6%;
+    background-color: white;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.apply-left {
+    flex: 1;
+    max-width: 500px;
+}
+
+.apply-tag {
+    color: #2D0D41;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.apply-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.apply-subtext {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.apply-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn.primary {
+    background-color: #2D0D41;
+    color: #fff;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: #222;
+    border: 2px solid transparent;
+}
+
+.btn.secondary:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    font-size: 1rem;
+}
+
+.apply-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.apply-right img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+/* ========== MOBILE VIEW (0px - 767px) ========== */
+@media screen and (max-width: 767px) {
+    .promo-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .promo-description {
+        font-size: 14px;
+    }
+
+    .client-reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo-illustration img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* ========== TABLET VIEW (768px - 1024px) ========== */
+@media screen and (max-width: 1024px) {
+    .promo-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .promo-text {
+        max-width: 100%;
+    }
+
+    .promo-illustration img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .container,
+    .about-section,
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+
+    .image-section img {
+        width: 100%;
+    }
+}
+
+
+
+
+/* ========== UNIVERSAL MOBILE RESPONSIVENESS ========== */
+@media (max-width: 767px) {
+
+    .career-hero,
+    .working-section,
+    .benefits-section,
+    .apply-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .career-left,
+    .career-right,
+    .working-left,
+    .working-right,
+    .benefits-left,
+    .benefits-right,
+    .apply-left,
+    .apply-right {
+        max-width: 100%;
+    }
+
+    .career-heading,
+    .section-title,
+    .apply-title {
+        font-size: 1.8rem;
+    }
+
+    .career-subtext,
+    .section-description,
+    .apply-subtext {
+        font-size: 1rem;
+    }
+
+    .img-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .img-grid .full-width {
+        grid-column: span 1;
+    }
+
+    .perk-card {
+        padding: 1rem;
+    }
+
+    .benefits-right img,
+    .working-left img,
+    .apply-right img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .value-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .value-icon {
+        margin: 0 0 10px 0;
+    }
+
+    .btn,
+    .btn.primary,
+    .btn.secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .apply-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

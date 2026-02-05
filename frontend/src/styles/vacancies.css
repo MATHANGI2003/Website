@@ -1,0 +1,448 @@
+.vacancy-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 6%;
+    background-color: #4b006e;
+    /* Purple background */
+    color: #fff;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.vacancy-info-left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.vacancy-titles {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.vacancy-breadcrumbs {
+    font-size: 1rem;
+    color: #d3c1e5;
+}
+
+.vacancy-link {
+    color: #d3c1e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.vacancy-current {
+    font-weight: 600;
+    color: #fff;
+}
+
+.vacancy-info-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.vacancy-description {
+    font-size: 1.1rem;
+    color: #e8d9f1;
+}
+
+
+
+
+.hot-vacancies-section {
+    padding: 4rem 6%;
+    background: #fff;
+    color: #333;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.hot-vacancies-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.featured-label {
+    color: #7e22ce;
+    /* Purple */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.hot-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.hot-subtext {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.vacancy-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.vacancy-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.vacancy-card {
+    background-color: #f8f6fc;
+    border: 1px solid #e2d9f3;
+    border-radius: 12px;
+    padding: 2rem;
+    flex: 1 1 300px;
+    max-width: 32%;
+    transition: all 0.3s ease;
+}
+
+.vacancy-card:hover {
+    box-shadow: 0 4px 12px rgba(126, 34, 206, 0.2);
+}
+
+.vacancy-category {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.vacancy-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.vacancy-info p {
+    margin: 0.2rem 0;
+}
+
+.vacancy-skills {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.vacancy-skills li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.vacancy-link {
+    font-weight: 600;
+    color: #7e22ce;
+    text-decoration: none;
+}
+
+.vacancy-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+    .vacancy-cards {
+        flex-direction: column;
+    }
+
+    .vacancy-card {
+        max-width: 100%;
+    }
+
+    .hot-vacancies-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+.internship-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.internship-tag {
+    color: #6a0dad;
+    /* Purple accent */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.internship-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #4b0082;
+    /* Deep purple title */
+}
+
+.internship-subtitle {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.internship-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.internship-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr 1fr;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+}
+
+.intern-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #6a0dad;
+    /* Purple highlight */
+}
+
+.intern-start {
+    font-size: 14px;
+    color: #444;
+}
+
+.intern-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #6a0dad;
+    /* Purple icon & text */
+    margin-bottom: 5px;
+}
+
+.icon {
+    margin-right: 6px;
+}
+
+.internship-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.apply-button {
+    background-color: #6a0dad;
+    /* Purple button */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #4b0082;
+    /* Darker purple on hover */
+}
+
+
+
+
+
+.search-container {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 24px;
+    padding: 0.6rem 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input-wrapper input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.search-icon {
+    margin-right: 0.5rem;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #dcdcdc;
+    border-top: none;
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown li:hover {
+    background: #f1f1f1;
+}
+
+.history-icon {
+    margin-right: 10px;
+    color: #888;
+}
+
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center (optional) */
+    min-height: 200px;
+    /* Adjust height as needed */
+    background-color: #f9f9f9;
+    /* Optional: match your site theme */
+}
+
+.search-input-wrapper input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    background: transparent;
+    padding: 0;
+    /* Remove any default input padding */
+    box-shadow: none;
+    /* Remove any default shadows */
+}
+
+
+
+
+
+/* ========== MOBILE VIEW (0px - 767px) ========== */
+@media screen and (max-width: 767px) {
+    .promo-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .promo-description {
+        font-size: 14px;
+    }
+
+    .client-reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo-illustration img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* ========== TABLET VIEW (768px - 1024px) ========== */
+@media screen and (max-width: 1024px) {
+    .promo-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .promo-text {
+        max-width: 100%;
+    }
+
+    .promo-illustration img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .container,
+    .about-section,
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+
+    .image-section img {
+        width: 100%;
+    }
+}

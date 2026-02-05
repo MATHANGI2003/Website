@@ -1,0 +1,141 @@
+.footer {
+  background: #2D0D41;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.footer-left,
+.footer-middle,
+.footer-services,
+.footer-right {
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #D4A5FF;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  margin-bottom: 0.5rem;
+}
+
+.footerp {
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+ul li:hover {
+  color: #D4A5FF;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid #444;
+  font-size: 0.875rem;
+}
+
+.social-icons {
+  display: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.social-icons button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #D4A5FF;
+}
+
+.footerp {
+  color: white;
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-services,
+  .footer-right {
+    flex: 1 1 22%;
+    min-width: 200px;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .footer-container {
+    gap: 0;
+    padding: 0;
+  }
+}
