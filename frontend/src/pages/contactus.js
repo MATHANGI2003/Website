@@ -22,7 +22,7 @@ const ContactUs = () => {
 
     try {
       const res = await fetch(
-        "https://website-97if.vercel.app/api/contact",
+        `${process.env.REACT_APP_BACKEND_URL}/api/contact`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -38,6 +38,7 @@ const ContactUs = () => {
 
       alert("✅ Message sent successfully!");
 
+      // reset form
       setFormData({
         user_name: "",
         user_phone: "",
