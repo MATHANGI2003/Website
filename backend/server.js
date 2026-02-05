@@ -59,6 +59,54 @@ app.get("/", (req, res) => {
 });
 
 /* -------------------- APPLICATION FORM -------------------- */
+/* -------------------- CONTACT FORM -------------------- */
+app.post("/api/contact", async (req, res) => {
+  try {
+    const { user_name, user_phone, user_email, message } = req.body;
+
+    if (!user_name || !user_email || !message) {
+      return res.status(400).json({
+        success: false,
+        error: "Missing required fields",
+      });
+    }
+
+    // Save to MongoDB
+    await Contact.create({
+      user_name,
+      user_phone,
+      user_email,
+      message,
+    });
+
+    // 📧 Send email to ADMIN
+    await transporter.sendMail({
+      from: `"Website Contact" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      replyTo: user_email,
+      subject: "New Contact Form Submission",
+      html: `
+        <h3>New Contact Message</h3>
+        <p><b>Name:</b> ${user_name}</p>
+        <p><b>Email:</b> ${user_email}</p>
+        <p><b>Phone:</b> ${user_phone}</p>
+        <p><b>Message:</b><br/>${message}</p>
+      `,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Message sent successfully",
+    });
+  } catch (error) {
+    console.error("❌ Contact Error:", error);
+    return res.status(500).json({
+      success: false,
+      error: "Server error while sending message",
+    });
+  }
+});
+
 app.post(
   "/api/applications",
   upload.fields([
