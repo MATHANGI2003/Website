@@ -80,8 +80,11 @@ const ApplicationForm = () => {
       data.append("experience", experience);
       data.append("certificate", formData.certificate);
       data.append("resume", formData.resume);
-await axios.post("/api/applications", data);
 
+      await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/applications`,
+        data
+      );
 
       setSubmitted(true);
       formRef.current.reset();
@@ -89,7 +92,7 @@ await axios.post("/api/applications", data);
 
       setTimeout(() => setSubmitted(false), 3000);
     } catch (err) {
-      alert("Submission failed");
+      alert("❌ Submission failed");
       console.error(err);
     } finally {
       setLoading(false);
@@ -100,18 +103,37 @@ await axios.post("/api/applications", data);
     <div className="form-container">
       {submitted && (
         <div className="popup-message">
-          ✅ Application submitted. Check your email!
+          ✅ Application submitted successfully!
         </div>
       )}
 
       <form ref={formRef} onSubmit={handleSubmit}>
         <h2>Application Form</h2>
 
-        <input name="name" placeholder="Name" required onChange={handleChange} />
-        <input name="email" type="email" placeholder="Email" required onChange={handleChange} />
-        <input name="position" placeholder="Position" required onChange={handleChange} />
+        <input
+          name="name"
+          placeholder="Name"
+          required
+          onChange={handleChange}
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          required
+          onChange={handleChange}
+        />
+        <input
+          name="position"
+          placeholder="Position"
+          required
+          onChange={handleChange}
+        />
 
-        <CustomDropdown selected={experience} setSelected={setExperience} />
+        <CustomDropdown
+          selected={experience}
+          setSelected={setExperience}
+        />
 
         <input type="file" name="certificate" required onChange={handleChange} />
         <input type="file" name="resume" required onChange={handleChange} />

@@ -16,40 +16,40 @@ const ContactUs = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-  try {
-const res = await fetch("/api/contact",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+    try {
+      const res = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong");
       }
-    );
 
-    const data = await res.json();
-
-    if (!res.ok) {
-      throw new Error(data.error || "Something went wrong");
+      alert("✅ Message sent successfully!");
+      setFormData({
+        user_name: "",
+        user_phone: "",
+        user_email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Contact Error:", error);
+      alert("❌ Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
     }
-
-    alert("✅ Message sent successfully!");
-
-    setFormData({
-      user_name: "",
-      user_phone: "",
-      user_email: "",
-      message: "",
-    });
-  } catch (error) {
-    console.error("Contact Error:", error);
-    alert("❌ Failed to send message. Please try again.");
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   return (
     <div>
@@ -65,7 +65,6 @@ const res = await fetch("/api/contact",
 
       <section className="contact-section">
         <div className="contact-container">
-
           <div className="contact-info">
             <h3>Contact Information</h3>
             <h1>Feel Free To Get In Touch</h1>
@@ -98,7 +97,6 @@ const res = await fetch("/api/contact",
                   value={formData.user_name}
                   onChange={handleChange}
                 />
-
                 <input
                   type="text"
                   name="user_phone"
@@ -131,12 +129,11 @@ const res = await fetch("/api/contact",
                 <img src={contactus2} alt="captcha" />
               </div>
 
-              <button type="submit" className="quote-btn" disabled={loading}>
+              <button type="submit" disabled={loading}>
                 {loading ? "Sending..." : "Submit Your Enquiry"}
               </button>
             </form>
           </div>
-
         </div>
       </section>
     </div>
