@@ -13,7 +13,7 @@ const Application = require("./models/application");
 const app = express();
 
 /* -------------------- MIDDLEWARE -------------------- */
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "https://website-fj7g.vercel.app/home" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
