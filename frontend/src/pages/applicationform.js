@@ -82,9 +82,9 @@ const ApplicationForm = () => {
       data.append("resume", formData.resume);
 
       await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/applications`,
-        data
-      );
+  "https://website-97if.vercel.app/api/applications",
+  data
+);
 
       setSubmitted(true);
       formRef.current.reset();

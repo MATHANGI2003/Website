@@ -16,42 +16,41 @@ const ContactUs = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      const res = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/api/contact`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || "Something went wrong");
+  try {
+    const res = await fetch(
+      "https://website-97if.vercel.app/api/contact",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       }
+    );
 
-      alert("✅ Message sent successfully!");
+    const data = await res.json();
 
-      // reset form
-      setFormData({
-        user_name: "",
-        user_phone: "",
-        user_email: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Contact Error:", error);
-      alert("❌ Failed to send message. Please try again.");
-    } finally {
-      setLoading(false);
+    if (!res.ok) {
+      throw new Error(data.error || "Something went wrong");
     }
-  };
+
+    alert("✅ Message sent successfully!");
+
+    setFormData({
+      user_name: "",
+      user_phone: "",
+      user_email: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error("Contact Error:", error);
+    alert("❌ Failed to send message. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div>
