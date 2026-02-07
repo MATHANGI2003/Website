@@ -6,7 +6,7 @@ import savithaImage from '../assets/images/savitha.jpg';
 import sanjayImage from '../assets/images/sanjay.png';
 import vinayImage from '../assets/images/vinay 2.png';
 import sathyaImage from '../assets/images/sathya.png';
-import groupPicImage from '../assets/images/grouppics.jpg';
+//import groupPicImage from '../assets/images/grouppics.jpg';
 
 const Experts = () => {
   return (
@@ -76,7 +76,7 @@ const Experts = () => {
           </div>
 
           <div className="team-image">
-            <img src={groupPicImage} alt="Photography Team" />
+          {/* <img src={groupPicImage} alt="Photography Team" /> */}
           </div>
         </section>
       </div>
