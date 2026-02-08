@@ -133,19 +133,19 @@ const ApplicationForm = () => {
           selected={experience}
           setSelected={setExperience}
         />
-
+    <label>Certificate:
         <input
           type="file"
           name="certificate"
           required
           onChange={handleChange}
-        />
-        <input
+        /></label>
+        <label>Resume:<input
           type="file"
           name="resume"
           required
           onChange={handleChange}
-        />
+        /></label>
 
         <button disabled={loading}>
           {loading ? "Submitting..." : "Submit"}
