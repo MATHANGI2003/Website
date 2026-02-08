@@ -6,6 +6,7 @@ header {
   padding: 5px 50px;
   background: #2b0a3d;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width:100%;
 }
 
 .logo img {
@@ -49,20 +50,36 @@ nav ul li a.active {
 /* ========== MOBILE VIEW (0px - 767px) ========== */
 @media screen and (max-width: 767px) {
   header {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
   }
-
+.logo img{
+  width:120 px;
+}
   nav ul {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+ nav ul::-webkit-scrollbar {
+    display: none;
   }
 
-  .quote-btn {
-    margin-top: 10px;
+  nav ul li a {
+    font-size: 14px;
   }
+  .quote-btn {
+   padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+  
 
   .hero-content h1 {
     font-size: 28px;
@@ -93,25 +110,27 @@ nav ul li a.active {
   .image-section img {
     width: 100%;
   }
-}
 
+}
 /* ========== TABLET VIEW (768px - 1024px) ========== */
 @media screen and (max-width: 1024px) {
   header {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    text-align: center;
+    padding: 12px 25px;
+  
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 20px;
-    padding-left: 0;
+    flex-direction: row;
+    gap: 24px;
+  
   }
 
   .quote-btn {
-    margin-top: 15px;
+  padding:8px 16px;
+  font-size: 13px;
   }
 
   .hero-content h1 {
