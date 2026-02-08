@@ -1,4 +1,4 @@
-/* Header Styling */
+/* ================= HEADER ================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -6,31 +6,48 @@ header {
   padding: 5px 50px;
   background: #2b0a3d;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width:100%;
+  width: 100%;
+  flex-wrap: nowrap;          /* prevent wrapping */
+  overflow-x: auto;
 }
 
 .logo img {
   width: 200px;
-  /* Adjust as needed */
   height: auto;
-  /* Maintain aspect ratio */
+}
+
+/* ================= NAV ================= */
+nav {
+  flex: 1;
+  overflow-x: auto;
 }
 
 nav ul {
   display: flex;
   gap: 70px;
+  flex-wrap: nowrap;          /* keep horizontal */
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul::-webkit-scrollbar {
+  display: none;
 }
 
 nav ul li a {
   color: rgb(243, 238, 238);
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 nav ul li a.active {
   color: purple;
 }
 
+/* ================= BUTTON ================= */
 .quote-btn {
   padding: 10px 20px;
   border: 2px solid purple;
@@ -39,6 +56,7 @@ nav ul li a.active {
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .quote-btn:hover {
@@ -46,41 +64,33 @@ nav ul li a.active {
   color: white;
 }
 
-
 /* ========== MOBILE VIEW (0px - 767px) ========== */
 @media screen and (max-width: 767px) {
   header {
-    flex-direction: row;
+    flex-direction: row;      /* force horizontal */
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
   }
-.logo img{
-  width:120 px;
-}
-  nav ul {
-    flex-direction: row;
-    gap: 16px;
-    overflow-x: auto;
-    white-space: nowrap;
+
+  .logo img {
+    width: 120px;             /* FIXED (px issue) */
   }
- nav ul::-webkit-scrollbar {
-    display: none;
+
+  nav ul {
+    gap: 16px;
   }
 
   nav ul li a {
     font-size: 14px;
   }
+
   .quote-btn {
-   padding: 6px 12px;
+    padding: 6px 12px;
     font-size: 12px;
   }
 
-  nav ul li a {
-    font-size: 14px;
-  }
-  
-
+  /* Other sections untouched */
   .hero-content h1 {
     font-size: 28px;
   }
@@ -110,8 +120,8 @@ nav ul li a.active {
   .image-section img {
     width: 100%;
   }
-
 }
+
 /* ========== TABLET VIEW (768px - 1024px) ========== */
 @media screen and (max-width: 1024px) {
   header {
@@ -119,18 +129,15 @@ nav ul li a.active {
     justify-content: space-between;
     align-items: center;
     padding: 12px 25px;
-  
   }
 
   nav ul {
-    flex-direction: row;
     gap: 24px;
-  
   }
 
   .quote-btn {
-  padding:8px 16px;
-  font-size: 13px;
+    padding: 8px 16px;
+    font-size: 13px;
   }
 
   .hero-content h1 {
@@ -153,44 +160,27 @@ nav ul li a.active {
   }
 }
 
-
-
 /* ========== 14-INCH SCREEN VIEW (1025px - 1440px) ========== */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 15px 40px;
   }
 
   nav {
-    flex: 1;
     display: flex;
     justify-content: center;
   }
 
   nav ul {
-    display: flex;
-    gap: 40px; /* Adjust gap between menu items */
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+    gap: 40px;
     align-items: center;
-  }
-
-  nav ul li {
-    display: inline-block;
-    font-weight: 500;
   }
 
   .quote-btn {
     margin-left: auto;
     padding: 10px 20px;
     font-size: 14px;
-    border: 2px solid #800080; /* Purple border */
     border-radius: 25px;
-    color: #800080;
     font-weight: 600;
   }
 
