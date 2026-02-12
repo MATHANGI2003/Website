@@ -18,7 +18,7 @@ import cybersecurity from "../assets/images/cybersecuriy.jpeg";
 import healthcare from "../assets/images/healthcare.png";
 import sap from "../assets/images/sap.jpeg";
 import user1 from "../assets/images/expert.jpg";
-<meta name="google-site-verification" content="s-UbftGl8rPfBQJg_ZzhNUpdV94YA25oLymX0la2Q0I" />
+
 const tabData = [
   {
     title: "Digital Transformation",
