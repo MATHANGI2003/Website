@@ -1,62 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
 /* ================= HEADER ================= */
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5px 50px;
+  justify-content: space-between;
+
+  padding: 10px 50px;
   background: #2b0a3d;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  flex-wrap: nowrap;          /* prevent wrapping */
-  overflow-x: auto;
+}
+
+
+/* ================= LOGO ================= */
+.logo {
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .logo img {
-  width: 200px;
+  width: 120px;
   height: auto;
 }
+
 
 /* ================= NAV ================= */
 nav {
   flex: 1;
-  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 nav ul {
   display: flex;
-  gap: 70px;
-  flex-wrap: nowrap;          /* keep horizontal */
-  white-space: nowrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  gap: 50px;
 
-nav ul::-webkit-scrollbar {
-  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 nav ul li a {
+  text-decoration: none;
   color: rgb(243, 238, 238);
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
+  transition: 0.3s;
 }
 
+nav ul li a:hover,
 nav ul li a.active {
-  color: purple;
+  color: #d28cff;
 }
+
 
 /* ================= BUTTON ================= */
 .quote-btn {
-  padding: 10px 20px;
-  border: 2px solid purple;
+  flex-shrink: 0; /* Prevent wrap */
+
+  padding: 12px 25px;
+
+  border: 2px solid #800080;
   background: white;
   color: #800080;
+
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
-  white-space: nowrap;
+
+  transition: 0.3s;
 }
 
 .quote-btn:hover {
@@ -64,149 +86,107 @@ nav ul li a.active {
   color: white;
 }
 
-/* ========== MOBILE VIEW (0px - 767px) ========== */
+
+/* =================================================
+   MOBILE VIEW (0px - 767px) - FORCE ONE LINE
+================================================= */
+
 @media screen and (max-width: 767px) {
+
   header {
-    flex-direction: row;      /* force horizontal */
+    flex-direction: row;
+    flex-wrap: nowrap; /* ❗ No wrap */
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
+
+    padding: 8px 12px;
+    overflow-x: auto; /* Allow scroll */
+  }
+
+  /* Logo always left */
+  .logo {
+    width: auto;
   }
 
   .logo img {
-    width: 120px;             /* FIXED (px issue) */
+    width: 85px;
+  }
+
+  /* Nav center */
+  nav {
+    flex: 1;
+    overflow-x: auto;
   }
 
   nav ul {
-    gap: 16px;
+    flex-direction: row;
+    flex-wrap: nowrap; /* ❗ No wrap */
+    gap: 15px;
+
+    justify-content: center;
   }
 
   nav ul li a {
     font-size: 14px;
   }
 
+  /* Button right */
   .quote-btn {
-    padding: 6px 12px;
-    font-size: 12px;
+    padding: 6px 14px;
+    font-size: 13px;
+    white-space: nowrap;
   }
 
-  /* Other sections untouched */
-  .hero-content h1 {
-    font-size: 28px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .promo-section,
-  .client-reviews {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
-
-  .promo-illustration img {
-    max-width: 90%;
-    margin-top: 20px;
-  }
-
-  .about-image img,
-  .image-section img {
-    width: 100%;
-  }
 }
 
-/* ========== TABLET VIEW (768px - 1024px) ========== */
-@media screen and (max-width: 1024px) {
+
+/* =================================================
+   TABLET VIEW (768px - 1024px)
+================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
   header {
     flex-direction: row;
+    flex-wrap: nowrap; /* ❗ Prevent wrap */
     justify-content: space-between;
-    align-items: center;
-    padding: 12px 25px;
+
+    padding: 15px 25px;
+  }
+
+  .logo img {
+    width: 100px;
   }
 
   nav ul {
-    gap: 24px;
+    gap: 25px;
   }
 
   .quote-btn {
-    padding: 8px 16px;
-    font-size: 13px;
+    padding: 8px 18px;
+    font-size: 14px;
   }
 
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-  }
-
-  .promo-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px;
-  }
-
-  .promo-illustration img {
-    max-width: 80%;
-    margin-top: 20px;
-  }
 }
 
-/* ========== 14-INCH SCREEN VIEW (1025px - 1440px) ========== */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  header {
-    padding: 15px 40px;
-  }
 
-  nav {
-    display: flex;
-    justify-content: center;
+/* =================================================
+   LAPTOP / DESKTOP (1025px+)
+================================================= */
+
+@media screen and (min-width: 1025px) {
+
+  header {
+    padding: 15px 50px;
   }
 
   nav ul {
     gap: 40px;
-    align-items: center;
   }
 
   .quote-btn {
-    margin-left: auto;
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 25px;
-    font-weight: 600;
+    padding: 10px 22px;
+    font-size: 15px;
   }
 
-  .hero-content h1 {
-    font-size: 42px;
-  }
-
-  .hero-content p {
-    font-size: 17px;
-  }
-
-  .hero-buttons a {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
-
-  .promo-section {
-    padding: 60px 40px;
-  }
-
-  .promo-illustration img {
-    max-width: 85%;
-  }
-
-  .about-image img,
-  .image-section img {
-    width: 90%;
-  }
 }
