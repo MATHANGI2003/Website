@@ -3,9 +3,9 @@ import "../styles/experts.css"; // Make sure your CSS file is correctly named an
 import expertImage from "../assets/images/expert.jpg";
 import mohanRajImage from "../assets/images/mohan raj.png";
 import savithaImage from '../assets/images/savitha.jpg';
-import sanjayImage from '../assets/images/sanjay.png';
-import vinayImage from '../assets/images/vinay 2.png';
-import sathyaImage from '../assets/images/sathya.png';
+//import sanjayImage from '../assets/images/sanjay.png';
+//import vinayImage from '../assets/images/vinay 2.png';
+//import sathyaImage from '../assets/images/sathya.png';
 //import groupPicImage from '../assets/images/grouppics.jpg';
 
 const Experts = () => {
