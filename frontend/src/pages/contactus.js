@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "../styles/contactus.css";
 import contactus2 from "../assets/images/contactus2.png";
 
+// ✅ Proper image imports
+import indiaFlag from "../assets/images/India.png";
+import uaeFlag from "../assets/images/UAE.png";
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     user_name: "",
@@ -75,9 +79,29 @@ const ContactUs = () => {
 
             <h3 className="city">Chennai</h3>
             <p>Email: ceitcschennai@gmail.com</p>
-            <p>Mobile: +91 9790835693</p>
-            <p>Mobile: +91 9791424421</p>
-            <p>Mobile: +971 545313855</p>
+
+            {/* ✅ India Number */}
+            <p style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              Mobile:
+              <img
+                src={indiaFlag}
+                alt="India Flag"
+                style={{ width: "24px", height: "auto" }}
+              />
+              +91 9791424421
+            </p>
+
+            {/* ✅ UAE Number */}
+            <p style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              Mobile:
+              <img
+                src={uaeFlag}
+                alt="UAE Flag"
+                style={{ width: "24px", height: "auto" }}
+              />
+              +971 545313855
+            </p>
+
             <p>
               Address: F3 Plot, 36, Ranganatha Nagar, Second Street,
               Selaiyur, Chennai – 600073
